@@ -1,0 +1,59 @@
+{
+	"name": "n8n-nodes-equipdash",
+	"version": "0.1.0",
+	"description": "n8n nodes for EquipDash, booking software for rental shops, tours, classes and activities.",
+	"license": "MIT",
+	"homepage": "https://github.com/equipdash/n8n-nodes-equipdash#readme",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"equipdash",
+		"booking",
+		"rentals"
+	],
+	"author": {
+		"name": "EquipDash",
+		"email": "support@equipdash.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/equipdash/n8n-nodes-equipdash.git"
+	},
+	"bugs": {
+		"url": "https://github.com/equipdash/n8n-nodes-equipdash/issues"
+	},
+	"scripts": {
+		"generate": "node tools/build.mjs",
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/EquipDashApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/EquipDash/EquipDash.node.js",
+			"dist/nodes/EquipDashTrigger/EquipDashTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.39.4",
+		"prettier": "3.8.3",
+		"release-it": "20.2.0",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-equipdash.equipDashTrigger",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Sales", "Productivity"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://github.com/equipdash/n8n-nodes-equipdash?tab=readme-ov-file#credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/equipdash/n8n-nodes-equipdash?tab=readme-ov-file"
+			}
+		]
+	}
+}
